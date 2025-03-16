@@ -1,0 +1,15 @@
+# Pliki konfiguracyjne IDE
+.idea/
+*.iml
+
+# Kompilowane pliki binarne
+bin/
+target/
+
+# Pliki Maven
+.mvn/
+*.log
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
