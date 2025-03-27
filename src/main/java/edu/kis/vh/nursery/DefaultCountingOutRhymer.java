@@ -2,8 +2,10 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private int[] numbers = new int[12];
+    public static final int MAX_CAPACITY = 12;
+    public static final int EMPTY_STACK_VALUE = -1;
 
+    private final int[] numbers = new int[MAX_CAPACITY];
     public int total = -1;
 
     public void countIn(int in) {
@@ -16,19 +18,18 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == MAX_CAPACITY - 1;
     }
 
     protected int peekAtTop() {
         if (callCheck())
-            return -1;
+            return EMPTY_STACK_VALUE;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return -1;
+            return EMPTY_STACK_VALUE;
         return numbers[total--];
     }
-
 }
