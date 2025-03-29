@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
     public static final int CALLCHECK = -1;
     public static final int FULLINDEX = 11;
     public static final int ERROR = -1;
-    private int[] numbers = new int[CAPACITY];
+    final private int[] numbers = new int[CAPACITY];
 
     public int total = -1;
 
